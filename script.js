@@ -19,7 +19,7 @@ function calc(){
         let result2  = result.value;
         result.value = eval(result2)
     } else{
-        alert("Erro! Adicione valores válidos.")
+        alert("Error, ingrese valores validos")
     }
 }
 
@@ -36,11 +36,11 @@ function del(){
 
 /*
     ====================================================
-    =================== TOGGLE THEME ===================
+    =================== ALTERAR TEMA ===================
     ====================================================
 */
 
-// All colors for differents themes
+// Todos los colores para los diferentes temas
 const theme = {
     defaul(){
         root.style.setProperty('--background'          , '#3a4764');
@@ -94,14 +94,14 @@ const theme = {
     }
 }
 
-// Get the root element
+// Obteniendo los elementos de raiz
 var root = document.querySelector(':root');
 
-// Checking the user themes preference
+// comprobando las preferencias del tema 
 const darkThemeMq  = window.matchMedia("(prefers-color-scheme: dark)");
 const lightThemeMq = window.matchMedia("(prefers-color-scheme: light)");
 
-// changing the theme with the results above
+// cambiando el tema con la preferencia seleccionada
 if (darkThemeMq.matches) {
     document.getElementById('btnTheme').value = "3";
     theme.dark();
@@ -113,12 +113,12 @@ if (darkThemeMq.matches) {
     theme.defaul();    
 }
 
-// Create a function for recive the value of range input
+// Creando la funcion que recibe el valor de entrada
 function myFunction_set(val) {
-    // receiving the input type range value
+    // recibiendo el valor del tema
     document.getElementById('btnTheme').value = val; 
 
-    // changing the theme with the results above
+    // Cambiando el tema con el valor elegido
     if(val == 1){
         theme.defaul();
     } 
