@@ -132,5 +132,67 @@ function myFunction_set(val) {
     } 
   
 }
+function convertTemperature() {
+    let temperature = parseFloat(document.getElementById("valorIng").value);
+    let unit = document.getElementById("unit").value;
+    let result;
+    if (unit === "celsius") {
+      // Convertir de Celsius a Fahrenheit
+      result = (temperature * 9/5) + 32;
+      document.getElementById("resultado").value = result + " F";;
+    } else if (unit === "fahrenheit") {
+      // Convertir de Fahrenheit a Celsius
+      result = (temperature - 32) * 5/9;
+      document.getElementById("resultado").value = result + " C";;
+    }
+  }
 
+  function presion() {
+    let input = document.getElementById("valorPre").value;
+    let unidad = document.getElementById("unidadP").value;
 
+    let resultado;
+    if (unidad === "pascal") {
+      // Convertir de Pascal a Bar
+      resultado = input / 100000;
+      document.getElementById("resulPres").value = resultado.toExponential() + " bar";;
+    } else if (unidad === "bar") {
+      // Convertir de Bar a Pascal
+      resultado = input * 100000;
+      document.getElementById("resulPres").value = resultado.toExponential() + " Pa";;
+    }
+  }
+
+  function masa() {
+    let seleccion = document.getElementById("uniMs").value;
+    let inputValor = parseFloat(document.getElementById("valorMs").value);
+    let resultado;
+
+    if (seleccion === "kilogramo") {
+      resultado = inputValor * 1000; // Convertir kilogramos a gramos
+      document.getElementById("resulMs").value = resultado + " gr";;
+    } else if (seleccion === "gramo") {
+      resultado = inputValor / 1000; // Convertir gramos a kilogramos
+      document.getElementById("resulMs").value = resultado + " kg";;
+    }
+
+    
+  }
+
+  function longitud() {
+    let input = document.getElementById("valorLong").value;
+    let selectedOption = document.getElementById("unidadL").value;
+
+    
+    if (selectedOption === "metro") {
+      let resul = input * 100; // Convertir de metros a centímetros
+      document.getElementById("resulLong").value = resul + " cm";;
+    } else if (selectedOption === "centimetro") {
+      let resul = input / 100; // Convertir de centímetros a metros
+      document.getElementById("resulLong").value = resul + " m";;
+    }
+  }
+  function goBack() {
+    window.history.back();
+  }
+  
