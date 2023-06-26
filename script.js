@@ -146,3 +146,19 @@ function convertTemperature() {
       document.getElementById("resultado").value = result;
     }
   }
+
+  function presion() {
+    let input = document.getElementById("valorPre").value;
+    let unidad = document.getElementById("unidadP").value;
+
+    let resultado;
+    if (unidad === "pascal") {
+      // Convertir de Pascal a Bar
+      resultado = input / 100000;
+      document.getElementById("resulPres").value = resultado.toExponential();
+    } else if (unidad === "bar") {
+      // Convertir de Bar a Pascal
+      resultado = input * 100000;
+      document.getElementById("resulPres").value = resultado.toExponential();
+    }
+  }

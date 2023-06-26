@@ -70,21 +70,69 @@
 
                     </div>
 
-                <!-- Bottom of the Calculator -->
-                <div class="calc-keys">
+                    <!-- Bottom of the Calculator -->
+                    <div class="calc-keys">
 
-                    <!-- All the Keys/Buttons for the Calculator Works -->
-                    <div class="container d-grid gap-2">
-                        <div class="row justify-content-center ">
-                            <input class="col-6" type="button" value="Calcular" id="valor" onclick="convertTemperature()">
+                        <!-- All the Keys/Buttons for the Calculator Works -->
+                        <div class="container d-grid gap-2">
+                            <div class="row justify-content-center ">
+                                <input class="col-6" type="button" value="Calcular" id="valor" onclick="convertTemperature()">
+                            </div>
+
+                        </div>
+
+                    </div>
+                    <br>
+                    <div class="row justify-content-center text-white text-center">
+                        <h6>Conversor de Presion</h6>
+                    </div>
+                    <div class="row">
+                        <div class="col-5">
+                            <div class="container calc-top2">
+                                <div class="calc-top2-result row">
+                                    <input type="number" id="valorPre" placeholder="Valor">
+                                </div>
+                            </div>
+        
+                        </div>
+                        <div class="col-1 text-white">
+                            <h3>=</h3>
+                        </div>
+                        <div class="col-5">
+                            <div class="container calc-top2">
+                                <div class="calc-top2-result row text-white">
+                                    <input type="text" id="resulPres" placeholder="0" required disabled>
+                                </div>
+                            </div>
+        
+                        </div>
+                    </div>
+                    <div class="row text-white text-center">
+                        <div class="col-12">
+                            <label for="temperature">Presion:</label>
+                       
+                            <select id="unidadP" class="sel">
+                                <option value="pascal">Pascal</option>
+                                <option value="bar">Bar</option>
+                            </select>
                         </div>
 
                     </div>
 
-                </div>
+                    <!-- Bottom of the Calculator -->
+                    <div class="calc-keys">
 
+                        <!-- All the Keys/Buttons for the Calculator Works -->
+                        <div class="container d-grid gap-2">
+                            <div class="row justify-content-center ">
+                                <input class="col-6" type="button" value="Calcular" id="valor" onclick="presion()">
+                            </div>
+
+                        </div>
+
+                    </div>
+                </div>
             </div>
-        </div>
     </div>
 
     <!-- Link Boostrap JS  -->

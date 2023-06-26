@@ -44,7 +44,14 @@
 
 .calc-content2{  
     position: absolute;
-    top: 20%;
+    top: 40%;
+    left: 20%;
+    transform: translate(-50%, -50%);
+}
+
+.calc-content3{  
+    position: absolute;
+    top: 40%;
     left: 50%;
     transform: translate(-50%, -50%);
 }
