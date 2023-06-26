@@ -132,5 +132,17 @@ function myFunction_set(val) {
     } 
   
 }
-
-
+function convertTemperature() {
+    let temperature = parseFloat(document.getElementById("valorIng").value);
+    let unit = document.getElementById("unit").value;
+    let result;
+    if (unit === "celsius") {
+      // Convertir de Celsius a Fahrenheit
+      result = (temperature * 9/5) + 32;
+      document.getElementById("resultado").value = result;
+    } else if (unit === "fahrenheit") {
+      // Convertir de Fahrenheit a Celsius
+      result = (temperature - 32) * 5/9;
+      document.getElementById("resultado").value = result;
+    }
+  }
