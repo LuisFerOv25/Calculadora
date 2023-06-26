@@ -162,3 +162,17 @@ function convertTemperature() {
       document.getElementById("resulPres").value = resultado.toExponential();
     }
   }
+
+  function masa() {
+    let seleccion = document.getElementById("uniMs").value;
+    let inputValor = parseFloat(document.getElementById("valorMs").value);
+    let resultado;
+
+    if (seleccion === "kilogramo") {
+      resultado = inputValor * 1000; // Convertir kilogramos a gramos
+    } else if (seleccion === "gramo") {
+      resultado = inputValor / 1000; // Convertir gramos a kilogramos
+    }
+
+    document.getElementById("resulMs").value = resultado;
+  }
