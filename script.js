@@ -176,3 +176,18 @@ function convertTemperature() {
 
     document.getElementById("resulMs").value = resultado;
   }
+
+  function longitud() {
+    let input = document.getElementById("valorLong").value;
+    let selectedOption = document.getElementById("unidadL").value;
+
+    
+    if (selectedOption === "metro") {
+      let resul = input * 100; // Convertir de metros a centímetros
+      document.getElementById("resulLong").value = resul;
+    } else if (selectedOption === "centimetro") {
+      let resul = input / 100; // Convertir de centímetros a metros
+      document.getElementById("resulLong").value = resul;
+    }
+  }
+  
