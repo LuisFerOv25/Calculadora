@@ -49,6 +49,13 @@
     transform: translate(-50%, -50%);
 }
 
+.calc-content3{  
+    position: absolute;
+    top: 40%;
+    left: 70%;
+    transform: translate(-50%, -50%);
+}
+
 /* Top of the calculator */
 .calc-top h3{
     color: var(--key-color-top);
@@ -273,3 +280,26 @@ input[type=range]::-ms-thumb {
 }
 
 /* ======================= Theme 2 ======================= */
+
+a.col#ext {
+    display: inline-block;
+    padding: 10px 20px;
+    border-radius: 5px;
+    background-color: #ff9800;
+    color: white;
+    text-decoration: none;
+    font-weight: bold;
+    transition: background-color 0.3s ease;
+    box-shadow: 2px 2px 4px rgba(0, 0, 0, 0.2);
+  }
+  
+  a.col#ext:hover {
+    background-color: #ffa726;
+    box-shadow: 2px 2px 4px rgba(0, 0, 0, 0.4);
+  }
+  
+  a.col#ext:active {
+    background-color: #ff8f00;
+    box-shadow: 2px 2px 4px rgba(0, 0, 0, 0.6);
+  }
+  
